@@ -1,0 +1,14 @@
+{
+  "name": "@arcana/font-preset-webpack-plugin",
+  "version": "0.1.0",
+  "description": "Font Loaders Preset Webpack Plugin",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "file-loader": "^2.0.0"
+  }
+}
