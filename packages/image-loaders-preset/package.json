@@ -1,0 +1,23 @@
+{
+  "name": "@arcana/image-loaders-preset",
+  "version": "0.1.0-alpha.1",
+  "description": "Image Loaders Preset webpack plugin",
+  "main": "src/index.js",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "loader",
+    "image",
+    "image-loader",
+    "url-loader",
+    "file-loader",
+    "config",
+    "image-config"
+  ],
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "file-loader": "2.0.0",
+    "url-loader": "1.1.2"
+  }
+}
