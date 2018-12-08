@@ -1,0 +1,26 @@
+{
+  "name": "@arcana/image-preset-webpack-plugin",
+  "version": "0.1.0",
+  "description": "Image Support Preset webpack plugin",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "loader",
+    "image",
+    "image-loader",
+    "style-loader",
+    "file-loader",
+    "config",
+    "sass-config"
+  ],
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "file-loader": "^2.0.0",
+    "url-loader": "^1.1.2"
+  }
+}
