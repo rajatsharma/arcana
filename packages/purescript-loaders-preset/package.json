@@ -15,5 +15,8 @@
     "loader"
   ],
   "author": "Rajat Sharma",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "purs-loader": "3.2.0"
+  }
 }
