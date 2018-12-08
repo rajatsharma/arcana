@@ -1,4 +1,3 @@
-## mu2
+## arcana
 
-_Basic Compositon of all the repos._
-
+_Webpack Plugins to ease your Webapp Bundling_
