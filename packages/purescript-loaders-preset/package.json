@@ -1,0 +1,19 @@
+{
+  "name": "@arcana/purescript-loaders-preset",
+  "version": "0.1.0-alpha.1",
+  "description": "Purs Loader Preset webpack plugin",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "purescript",
+    "purs-loader",
+    "webpack",
+    "config",
+    "plugin",
+    "loader"
+  ],
+  "author": "Rajat Sharma",
+  "license": "MIT"
+}
