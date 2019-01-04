@@ -17,6 +17,7 @@
   "author": "Rajat Sharma",
   "license": "MIT",
   "dependencies": {
-    "purs-loader": "3.2.0"
+    "purs-loader": "3.2.0",
+    "webpack-merge": "^4.1.5"
   }
 }

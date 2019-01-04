@@ -1,5 +1,5 @@
 const [fs, path] = [require('fs'), require('path')];
-
+const merge = require('webpack-merge');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
@@ -23,9 +23,11 @@ class PursLoadersPreset {
       ? require('./config/production.config')(this.options)
       : require('./config/development.config')(this.options);
     // Merge config
-    config.plugins.forEach(plugin => plugin.apply(compiler));
+    config.plugins.forEach(
+      plugin => console.log(plugin.apply) || plugin.apply(compiler),
+    );
     compiler.hooks.afterEnvironment.tap('PursLoadersPreset', () => {
-      compiler.options.module.rules.push(...config.module.rules);
+      compiler.options.module.rules.unshift(config.module.rules);
     });
   }
 }
