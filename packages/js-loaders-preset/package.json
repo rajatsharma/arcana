@@ -1,0 +1,27 @@
+{
+  "name": "@arcana/js-loaders-preset",
+  "version": "0.1.0",
+  "description": "Js Loaders preset webpack plugin",
+  "main": "src/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "preset",
+    "plugin",
+    "babel",
+    "plugnplay",
+    "simple"
+  ],
+  "author": "Rajat Sharma",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-named-asset-import": "^0.3.0",
+    "babel-plugin-transform-dynamic-import": "^2.1.0"
+  }
+}
