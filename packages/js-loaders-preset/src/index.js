@@ -1,8 +1,6 @@
-const defaultOptions = { name: 'static/media/[name].[hash:8].[ext]' };
-
 class JsLoadersPresetWebpackPlugin {
   constructor(options = {}) {
-    this.options = Object.assign({}, defaultOptions, options);
+    this.options = Object.assign({}, options);
   }
 
   apply(compiler) {
@@ -12,10 +10,19 @@ class JsLoadersPresetWebpackPlugin {
         ? this.options.mode === 'production'
         : compiler.options.mode === 'production' || !compiler.options.mode;
     const config = isProductionLikeMode
-      ? require('./config/production.config')(this.options)
-      : require('./config/development.config')(this.options);
+      ? require('./config/production.config')({
+          babelRc: false,
+          ...this.options,
+          presets: [require.resolve('@lectro/babel-preset-lectro')],
+        })
+      : require('./config/development.config')({
+          ...this.options,
+          babelRc: false,
+          presets: [require.resolve('@lectro/babel-preset-lectro')],
+        });
     // Merge config
-    config.plugins.forEach(plugin => plugin.apply(compiler));
+    if (config.plugins)
+      config.plugins.forEach(plugin => plugin.apply(compiler));
     compiler.hooks.afterEnvironment.tap('JsLoadersPresetWebpackPlugin', () => {
       compiler.options.module.rules.push(...config.module.rules);
     });
